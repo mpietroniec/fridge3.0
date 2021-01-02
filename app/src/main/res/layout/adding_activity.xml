@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".activities.AddingActivity">
+
+    <EditText
+        android:id="@+id/add_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:autofillHints="@string/nazwa_produktu"
+        android:backgroundTint="@color/colorPrimary"
+        android:maxLines="1"
+        android:drawableStart="@drawable/ic_baseline_playlist_add_30"
+        android:hint="@string/nazwa_produktu"
+        android:inputType="text"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/add_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_name"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:autofillHints="@string/nazwa_produktu"
+        android:backgroundTint="@color/colorPrimary"
+        android:maxLines="1"
+        android:drawableStart="@drawable/ic_baseline_north_east_30"
+        android:hint="@string/ilosc"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_amount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="@string/dodaj"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/add_next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/add_button"
+            android:background="@drawable/custom_button"
+            android:text="@string/kolejny_produkt"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/add_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/add_next_btn"
+            android:background="@drawable/custom_button"
+            android:text="@string/wstecz"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</RelativeLayout>
